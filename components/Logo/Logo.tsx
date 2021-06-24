@@ -5,7 +5,7 @@ export type LogoProps = {
   size: number
 }
 
-const Logo = ({ size = 250 }: { size?: number }) => {
+const Logo = ({ size = 250 }: LogoProps) => {
   return (
     <div>
       <img
