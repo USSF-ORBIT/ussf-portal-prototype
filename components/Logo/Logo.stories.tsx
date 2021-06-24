@@ -1,11 +1,13 @@
 import React from 'react'
-import Logo from './Logo'
+import { Meta } from '@storybook/react'
+import Logo, { LogoProps } from './Logo'
 
 export default {
-    title: 'Components/Logo',
-    component: Logo,
-}
+  title: 'Components/Logo',
+  component: Logo,
+  argTypes: {
+    size: { control: 'number' },
+  },
+} as Meta
 
-export const defaultLogo = (): React.ReactElement => (
-    <Logo />
-)
+export const DefaultLogo = (args: LogoProps) => <Logo {...args} />
