@@ -33,7 +33,8 @@
     "security"
   ],
   "rules": {
-    "react/button-has-type": "error"
+    "react/button-has-type": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   },
   "settings": {
     "react": {
