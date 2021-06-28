@@ -1,4 +1,5 @@
 # ussf-portal-prototype
+
 Prototype for USSF Portal
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
@@ -6,6 +7,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 
 Install dependencies:
+
 ```bash
 yarn install
 ```
@@ -19,20 +21,22 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser.
 
 ## Storybook
+
 We're using [Storybook](https://storybook.js.org/) for building and reviewing components. Each component we want to display in Storybook will have a corresponding file in `stories`.
 
 ### Dependencies
+
 Run `yarn install` to make sure you have all dependencies installed.
 
 ### Run Locally
 
 Run Storybook in dev mode:
+
 ```bash
 yarn storybook
 ```
 
 This will start the local instance and open a tab in your browser. If not, go to http://localhost:6006/
-
 
 ## Resources
 
