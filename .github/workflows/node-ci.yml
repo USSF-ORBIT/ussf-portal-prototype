@@ -36,3 +36,6 @@ jobs:
 
       - name: Lint code
         run: yarn lint
+
+      - name: Run Jest tests
+        run: yarn test --coverage

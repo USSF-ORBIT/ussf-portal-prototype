@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 export type LogoProps = {
-  size: number
+  size?: number
 }
 
 const Logo = ({ size = 250 }: LogoProps) => {
