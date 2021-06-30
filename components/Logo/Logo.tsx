@@ -9,8 +9,8 @@ const Logo = ({ size = 250 }: LogoProps) => {
   return (
     <div>
       <Image
-        src='/space-force-logo.png'
-        alt='Space Force'
+        src="/space-force-logo.png"
+        alt="Space Force"
         width={size}
         height={size}
       />
