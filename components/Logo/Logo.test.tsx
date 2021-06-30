@@ -18,6 +18,6 @@ describe('Logo component', () => {
     render(<Logo size={250} />)
 
     const image = screen.getByRole('img')
-    expect(image).not.toHaveAttribute('alt', 'Space Force')
+    expect(image).toHaveAttribute('alt', 'Space Force')
   })
 })
