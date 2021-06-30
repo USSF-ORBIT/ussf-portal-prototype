@@ -1,7 +1,4 @@
+// // babel.config.js
 module.exports = {
-  env: {
-    test: {
-      presets: ['next/babel'],
-    },
-  },
+  presets: ['next/babel'],
 }
