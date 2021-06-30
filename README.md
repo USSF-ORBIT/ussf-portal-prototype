@@ -1,54 +1,50 @@
 # ussf-portal-prototype
 
-Prototype for USSF Portal
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8913c1a5-79ca-48e1-a05e-2c24e98b80df/deploy-status)](https://app.netlify.com/sites/jolly-mcclintock-622e06/deploys)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a prototype application for testing design concepts for the USSF portal website. It is a static site built on [NextJS](https://nextjs.org/). We're also using [Storybook](https://storybook.js.org/) for building and reviewing components.
 
-## Getting Started
+## Development
 
-Install dependencies:
+### Environment Setup
 
-```bash
-yarn install
-```
+- Make sure you are using the version of node specified in `.node-version`.
+  - We recommend using [nodenv](https://github.com/nodenv/nodenv) to install and manage node versions.
+- Use [yarn v1](https://yarnpkg.com) to manage JS packages.
+  - [Install yarn](https://yarnpkg.com/en/docs/install) if you do not already have it.
+  - Type `yarn` or `yarn install` inside the project directory to install dependencies. You will need to do this once after cloning the project, and continuously if the dependencies in `package.json` change.
 
-Run the development server:
+### Available commands
 
-```bash
-yarn dev
-```
+- `yarn dev`: Starts NextJS server in development mode and watches for changed files
+- `yarn build`: Builds the NextJS production asset bundle
+- `yarn start`: Starts the NextJS server in production mode
+- `yarn storybook`: Starts the Storybook component library on port 6006
+- `yarn storybook:build`: Build Storybook to a static site that can be deployed
+- `yarn format`: Autoformat all code using Prettier
+- `yarn lint`: Runs the TypeScript compiler and ESLint and outputs issues
 
-Open [http://localhost:3000](http://localhost:3000) with your browser.
+### Working on an issue
 
-## Storybook
+To begin working on an issue, make sure you've assigned yourself to the issue in Github and marked it as "In Progress.".
 
-We're using [Storybook](https://storybook.js.org/) for building and reviewing components. Each component we want to display in Storybook will have a corresponding file in `stories`.
+Once you have an issue to work on, create a new branch off `main` using the naming convention:
 
-### Dependencies
+`{issue #}-{summary}`
 
-Run `yarn install` to make sure you have all dependencies installed.
+For example: `112-logo-component`
 
-### Run Locally
+When you commit your changes, several hooks will run to check and format staged files. In order to be eligible for merging, all branches must pass the following automation.
 
-Run Storybook in dev mode:
-
-```bash
-yarn storybook
-```
-
-This will start the local instance and open a tab in your browser. If not, go to http://localhost:6006/
-
-## Resources
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Prettier](https://prettier.io/), [TypeScript compilation](https://www.typescriptlang.org/) and [eslint](https://eslint.org/) are run on _staged files_ as a pre-commit hook
+  - For an optimal developer experience, it's recommended that you configure your editor to run linting & formatting inline.
+- [Jest tests](https://jestjs.io/) are run in CI and must pass before the branch can be merged
+- PR titles must follow conventional commits specification.
+  - We use [`standard-version`](https://github.com/conventional-changelog/standard-version). This auto-generates version numbers and changelog based on commits. We [squash & merge](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits) PR commits, so the title must be correct.
+  - The version number is determined based on the commit prefix -
+    **[fix]** indicates a bug fix, **[feat]** indicates a minor bump.
+    **[!]** or [BREAKING CHANGES] indicates a major bump. Other
+    possibilities include **build**, **ci**, **chore**, **docs**,
+    **perf**, **refactor**, **revert**, **style**, **test**. It is
+    _strongly_ recommended you familiarize yourself with [conventional commits](https://www.conventionalcommits.org).
+  - The **[WIP]** prefix can be used to indicate a pull request is still work in progress. In this case, the PR title is not validated and the pull request lint check remains pending.
