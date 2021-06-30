@@ -10,7 +10,8 @@
     "storybook:build": "build-storybook",
     "format": "prettier --write .",
     "lint": "tsc --noEmit && eslint .",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@trussworks/react-uswds": "^2.0.0",
