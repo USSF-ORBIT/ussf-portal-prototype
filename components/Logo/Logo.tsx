@@ -6,8 +6,6 @@ export type LogoProps = {
 }
 
 const Logo = ({ size = 250 }: LogoProps) => {
-  var testVar = 'this is never used!'
-
   return (
     <div>
       <Image
