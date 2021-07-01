@@ -1,18 +1,18 @@
 import React from 'react'
-import styles from './Logo.module.css'
+import Image from 'next/image'
 
 export type LogoProps = {
-  size: number
+  size?: number
 }
 
 const Logo = ({ size = 250 }: LogoProps) => {
   return (
     <div>
-      <img
-        src="space-force-logo.png"
-        alt="Space Force logo"
-        className={styles.default}
-        style={{ width: `${size}px` }}
+      <Image
+        src="/space-force-logo.png"
+        alt="Space Force"
+        width={size}
+        height={size}
       />
     </div>
   )
