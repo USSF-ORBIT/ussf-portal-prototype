@@ -14,15 +14,22 @@ This is a prototype application for testing design concepts for the USSF portal 
   - [Install yarn](https://yarnpkg.com/en/docs/install) if you do not already have it.
   - Type `yarn` or `yarn install` inside the project directory to install dependencies. You will need to do this once after cloning the project, and continuously if the dependencies in `package.json` change.
 
-### Available commands
+### yarn scripts
+
+Most commonly used during development:
 
 - `yarn dev`: Starts NextJS server in development mode and watches for changed files
-- `yarn build`: Builds the NextJS production asset bundle
-- `yarn start`: Starts the NextJS server in production mode
 - `yarn storybook`: Starts the Storybook component library on port 6006
-- `yarn storybook:build`: Build Storybook to a static site that can be deployed
+- `yarn test:watch`: Run Jest tests in watch mode
+
+Other (you won't use these often):
+
 - `yarn format`: Autoformat all code using Prettier
 - `yarn lint`: Runs the TypeScript compiler and ESLint and outputs issues
+- `yarn test`: Run Jest tests once
+- `yarn storybook:build`: Build Storybook to a static site that can be deployed
+- `yarn build`: Builds the NextJS production asset bundle
+- `yarn start`: Starts the NextJS server in production mode
 
 ### Working on an issue
 
@@ -30,21 +37,10 @@ To begin working on an issue, make sure you've assigned yourself to the issue in
 
 Once you have an issue to work on, create a new branch off `main` using the naming convention:
 
-`{issue #}-{summary}`
+`{issue #}-{short description}`
 
 For example: `112-logo-component`
 
-When you commit your changes, several hooks will run to check and format staged files. In order to be eligible for merging, all branches must pass the following automation.
+We have a pre-commit hook set up using Husky to run on staged files only. This will run [Prettier](https://prettier.io/), [TypeScript compilation](https://www.typescriptlang.org/) and [eslint](https://eslint.org/) and fail on errors. For an optimal developer experience, it's recommended that you configure your editor to run linting & formatting inline.
 
-- [Prettier](https://prettier.io/), [TypeScript compilation](https://www.typescriptlang.org/) and [eslint](https://eslint.org/) are run on _staged files_ as a pre-commit hook
-  - For an optimal developer experience, it's recommended that you configure your editor to run linting & formatting inline.
-- [Jest tests](https://jestjs.io/) are run in CI and must pass before the branch can be merged
-- PR titles must follow conventional commits specification.
-  - We use [`standard-version`](https://github.com/conventional-changelog/standard-version). This auto-generates version numbers and changelog based on commits. We [squash & merge](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits) PR commits, so the title must be correct.
-  - The version number is determined based on the commit prefix -
-    **[fix]** indicates a bug fix, **[feat]** indicates a minor bump.
-    **[!]** or [BREAKING CHANGES] indicates a major bump. Other
-    possibilities include **build**, **ci**, **chore**, **docs**,
-    **perf**, **refactor**, **revert**, **style**, **test**. It is
-    _strongly_ recommended you familiarize yourself with [conventional commits](https://www.conventionalcommits.org).
-  - The **[WIP]** prefix can be used to indicate a pull request is still work in progress. In this case, the PR title is not validated and the pull request lint check remains pending.
+When your branch is ready, open a PR against `main`, fill out the description and request code reviews. The code must pass the same linting and formatting checks mentioned above, as well as [Jest tests](https://jestjs.io/) in order to merge.
