@@ -17,18 +17,18 @@ jobs:
         with:
           validateSingleCommit: true
           wip: true
-          types:
-            - build
-            - chore
-            - ci
-            - feat
-            - fix
-            - docs
-            - style
-            - refactor
-            - perf
-            - test
-            - component
+          types: |
+            build
+            chore
+            ci
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            component
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
