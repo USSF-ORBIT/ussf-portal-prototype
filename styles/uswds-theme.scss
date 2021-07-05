@@ -1,8 +1,10 @@
-@import 'uswds-theme-general';
-@import 'uswds-theme-typography';
-@import 'uswds-theme-spacing';
-@import 'uswds-theme-color';
-@import 'uswds-theme-utilities';
-@import 'settings';
-@import 'uswds';
-@import 'uswds-theme-custom-styles';
+@import 'node_modules/uswds/dist/scss/theme/uswds-theme-general';
+@import 'node_modules/uswds/dist/scss/theme/uswds-theme-typography';
+@import 'node_modules/uswds/dist/scss/theme/uswds-theme-spacing';
+@import 'node_modules/uswds/dist/scss/theme/uswds-theme-color';
+@import 'node_modules/uswds/dist/scss/theme/uswds-theme-utilities';
+@import 'settings.scss';
+@import 'node_modules/uswds/src/stylesheets/packages/_required.scss';
+
+@import 'node_modules/uswds/dist/scss/uswds';
+// @import '_uswds-theme-custom-styles';
