@@ -1,0 +1,7 @@
+// #TODO: Use webpack sass loader to automate
+@import 'styles/uswds-dependencies.scss';
+
+.default {
+  width: 250px;
+  @include u-padding(1);
+}

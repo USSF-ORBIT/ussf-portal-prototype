@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
 import { Search } from '@trussworks/react-uswds'
+import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (

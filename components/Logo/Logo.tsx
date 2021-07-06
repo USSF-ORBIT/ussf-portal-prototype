@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import styles from './Logo.module.scss'
 
 export type LogoProps = {
   size?: number
@@ -7,7 +8,7 @@ export type LogoProps = {
 
 const Logo = ({ size = 250 }: LogoProps) => {
   return (
-    <div>
+    <div className={styles.default}>
       <Image
         src="/space-force-logo.png"
         alt="Space Force"
