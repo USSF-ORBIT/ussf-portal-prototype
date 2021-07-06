@@ -1,3 +1,7 @@
+// #TODO: Use webpack sass loader to automate
+// for all css module files
+@import 'uswds-dependencies.scss';
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -6,6 +10,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  max-width: units($theme-grid-container-max-width);
+  @include u-padding(1);
 }
 
 .main {
