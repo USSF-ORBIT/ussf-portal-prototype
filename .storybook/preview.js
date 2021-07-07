@@ -1,5 +1,4 @@
-import '@trussworks/react-uswds/lib/uswds.css'
-import '@trussworks/react-uswds/lib/index.css'
+import '../styles/storybook.scss'
 import * as NextImage from 'next/image'
 
 // Storybook and next/image component do not play nice together
