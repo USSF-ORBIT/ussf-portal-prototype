@@ -20,7 +20,7 @@
 
   ],
   "ignorePresets": [":prHourlyLimit2"],
-  "ignorePaths": [".github/*"]
+  "ignorePaths": [".github/workflows/*"]
 
 
 
