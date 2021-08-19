@@ -19,7 +19,8 @@
       }
 
   ],
-  "ignorePresets": [":prHourlyLimit2"]
+  "ignorePresets": [":prHourlyLimit2"],
+  "ignorePaths": [".github/*"]
 
 
 
