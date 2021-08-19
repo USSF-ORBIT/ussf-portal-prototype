@@ -13,16 +13,7 @@
           "lockFileMaintenance": { "enabled": true },
           "labels": ["dependencies"],
           "ignoreDeps": ["uswds"]
-      },
-      {
-          "matchPackageNames": [
-            "@types/node"
-          ],
-          "matchUpdateTypes": [
-            "major"
-          ],
-          "enabled": false
-        }
+      }
 
   ]
 
