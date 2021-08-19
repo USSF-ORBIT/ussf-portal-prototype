@@ -11,8 +11,11 @@
           ],
           "automerge": true,
           "lockFileMaintenance": { "enabled": true },
-          "labels": ["dependencies"],
-          "ignoreDeps": ["uswds"]
+          "labels": ["dependencies"]
+      },
+      {
+        "matchPackageNames": ["uswds"],
+        "enabled": false
       }
 
   ]
