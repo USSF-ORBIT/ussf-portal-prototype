@@ -18,7 +18,8 @@
         "enabled": false
       }
 
-  ]
+  ],
+  "ignorePresets": [":prHourlyLimit2"]
 
 
 
