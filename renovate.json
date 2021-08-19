@@ -1,5 +1,31 @@
 {
   "extends": [
     "config:base"
+  ],
+  "packageRules": [
+      {
+          "rebaseWhen": "behind-base-branch",
+          "matchUpdateTypes": [
+              "patch",
+              "minor"
+          ],
+          "automerge": true,
+          "lockFileMaintenance": { "enabled": true },
+          "labels": ["dependencies"],
+          "ignoreDeps": ["uswds"]
+      },
+      {
+          "matchPackageNames": [
+            "@types/node"
+          ],
+          "matchUpdateTypes": [
+            "major"
+          ],
+          "enabled": false
+        }
+
   ]
+
+
+
 }
