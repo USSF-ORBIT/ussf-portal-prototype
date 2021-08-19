@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+      {
+          "rebaseWhen": "behind-base-branch",
+          "matchUpdateTypes": [
+              "patch",
+              "minor"
+          ],
+          "automerge": true,
+          "lockFileMaintenance": { "enabled": true },
+          "labels": ["dependencies"]
+      },
+      {
+        "matchPackageNames": ["uswds"],
+        "enabled": false
+      }
+
+  ],
+  "ignorePresets": [":prHourlyLimit2"],
+  "ignorePaths": [".github/workflows/*"]
+
+
+
+}
