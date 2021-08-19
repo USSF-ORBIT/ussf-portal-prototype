@@ -7,7 +7,9 @@
           "rebaseWhen": "behind-base-branch",
           "matchUpdateTypes": [
               "patch",
-              "minor"
+              "minor",
+              "pin",
+              "digest"
           ],
           "automerge": true,
           "lockFileMaintenance": { "enabled": true },
