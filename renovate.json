@@ -18,6 +18,11 @@
       "groupName": "dependencies",
       "managers": ["npm"],
       "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "managers": ["docker"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
     }
   ],
   "ignorePresets": [":prHourlyLimit2"]
