@@ -1,0 +1,16 @@
+name: JFrog CLI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Artifactory
+        uses: katcosgrove/jfrog-actions@master
+        with:
+            cmd: 'ping'
+        env:
+            auth: ${{ secrets.ART_AUTH }}
+            accesstoken: ${{ secrets.ART_ACCESSTOKEN }}
+            url: ${{ secrets.ART_URL }}
