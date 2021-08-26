@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Artifactory
-        uses: katcosgrove/jfrog-actions@master
+        uses: katcosgrove/jfrogcli-action@master
         with:
             cmd: 'ping'
         env:
