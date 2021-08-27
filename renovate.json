@@ -20,7 +20,7 @@
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
-      "managers": ["docker"],
+      "managers": ["dockerfile"],
       "matchUpdateTypes": ["major"],
       "enabled": false
     }
