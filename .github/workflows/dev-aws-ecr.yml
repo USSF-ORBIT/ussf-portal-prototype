@@ -65,7 +65,7 @@ jobs:
       run: |
         ls ~/.docker
         sudo mkdir ~/.docker/certs.d/
-        sudo echo "${{ secrets.ART_PEM }}" > ~/.docker/certs.d/$C1_REGISTRY.pem
+        echo "${{ secrets.ART_PEM }}" > ~/.docker/certs.d/$C1_REGISTRY.pem
         sudo update-ca-certificates
         ls ~/.docker/certs.d/
         docker login -u portal -p ${{ secrets.C1_ARTIFACTORY_TOKEN }} $C1_REGISTRY
