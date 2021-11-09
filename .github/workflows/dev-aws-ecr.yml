@@ -59,7 +59,7 @@ jobs:
     - name: Build, tag, and push image to C1 Artifactory
       id: build-c1-image
       env:
-        IMAGE_TAG: ${{ env.RELEASE_VERSION }}
+        IMAGE_TAG: ${{ github.sha }}
         C1_REGISTRY: ${{ secrets.C1_REGISTRY }}
         C1_REPOSITORY: ${{ secrets.C1_REPOSITORY }}
       run: |
