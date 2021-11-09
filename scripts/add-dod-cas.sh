@@ -1,7 +1,7 @@
 #!/bin/bash
 # Import DoD root certificates into linux CA store
 
-main() {
+
     # Location of bundle from DISA site
     bundle=https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/certificates_pkcs7_DoD.zip
 
@@ -26,7 +26,3 @@ main() {
     # Remove temp files and update certificate stores
     rm -fr tmp
     update-ca-certificates
-}
-
-# Only execute if not being sourced
-[[ ${BASH_SOURCE[0]} == "$0" ]] && main "$@"
