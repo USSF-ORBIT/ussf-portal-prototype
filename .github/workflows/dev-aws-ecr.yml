@@ -64,10 +64,12 @@ jobs:
         C1_REPOSITORY: ${{ secrets.C1_REPOSITORY }}
         JF_ARTIFACTORY_SERVER: ${{ secrets.JF_ARTIFACTORY_SERVER_1 }}
       run: |
-        sudo echo "${{ secrets.ART_PEM }}" > /usr/local/share/ca-certificates/art.pem
-        sudo update-ca-certificates
+        #sudo echo "${{ secrets.ART_PEM }}" > /usr/local/share/ca-certificates/art.pem
+        #sudo update-ca-certificates
+        ls /etc/docker/certs.d/
         docker login -u portal -p ${{ secrets.C1_ARTIFACTORY_TOKEN }} $C1_REGISTRY
-        docker build -t $C1_REGISTRY/$C1_REPOSITORY:$IMAGE_TAG .
-        docker push $C1_REGISTRY/$C1_REPOSITORY:$IMAGE_TAG
-        echo "::set-output name=image::$C1_REGISTRY/$C1_REPOSITORY:$IMAGE_TAG"
+        #docker build -t $C1_REGISTRY/$C1_REPOSITORY:$IMAGE_TAG .
+        #docker push $C1_REGISTRY/$C1_REPOSITORY:$IMAGE_TAG
+        ls /etc/docker/certs.d/
+        #echo "::set-output name=image::$C1_REGISTRY/$C1_REPOSITORY:$IMAGE_TAG"
         docker logout $C1_REGISTRY
