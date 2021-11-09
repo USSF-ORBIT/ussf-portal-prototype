@@ -65,6 +65,7 @@ jobs:
         JF_ARTIFACTORY_SERVER: ${{ secrets.JF_ARTIFACTORY_SERVER_1 }}
       run: |
         ls /etc/docker
+        sudo mkdir -p /etc/docker/certs.d/
         ls /etc/docker/certs.d/
         docker login -u portal -p ${{ secrets.C1_ARTIFACTORY_TOKEN }} $C1_REGISTRY
         #docker build -t $C1_REGISTRY/$C1_REPOSITORY:$IMAGE_TAG .
