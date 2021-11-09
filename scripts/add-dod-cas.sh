@@ -9,7 +9,7 @@
     # Extract the bundle
     cd /usr/local/share/ca-certificates
     wget $bundle
-    unzip ${bundle}
+    unzip certificates_pkcs7_DoD.zip
 
     # Convert the PKCS#7 bundle into individual PEM files
     openssl pkcs7 -print_certs -in Certificates_PKCS7_v5.9_DoD/*.pem.p7b |
