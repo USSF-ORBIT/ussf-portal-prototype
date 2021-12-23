@@ -11,5 +11,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Get tag
       run: |
-        echo git.short.sha = ${{ github.sha:7 }}
+        echo git.short.sha = ${ GITHUB_SHA:7 }
         echo github.event.pull_request_number = ${{ github.event.pull_request_number }}
