@@ -16,3 +16,4 @@ jobs:
       run: |
         echo ${{ steps.vars.outputs.sha_short }}
         echo github.event.pull_request_number = ${{ github.event.pull_request.number }}
+        echo PORT = "3"+${{ github.event.pull_request.number }}
