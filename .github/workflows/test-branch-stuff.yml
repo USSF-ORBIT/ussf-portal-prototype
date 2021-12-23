@@ -5,11 +5,11 @@ on:
     branches: [main]
 
 jobs:
-  build-and-push-aws:
+  get-things:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Get tag
       run: |
-        echo git.short.sha = ${ GITHUB_SHA:7 }
+        echo git.short.sha = ${GITHUB_SHA:7}
         echo github.event.pull_request_number = ${{ github.event.pull_request_number }}
