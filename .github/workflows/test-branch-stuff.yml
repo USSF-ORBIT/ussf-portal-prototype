@@ -13,4 +13,6 @@ jobs:
       id: vars
       run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
     - name: Check outputs
-      run: echo ${{ steps.vars.outputs.sha_short }}
+      run: |
+        echo ${{ steps.vars.outputs.sha_short }}
+        echo github.event.pull_request_number = ${{ github.event.pull_request_number }}
