@@ -16,7 +16,7 @@ ENV PATH=/app/node_modules/.bin:$PATH \
 ENV NEXT_TELEMETRY_DISABLED=1
 
 COPY package.json yarn.lock /app/
-COPY scripts/copy_uswds_assets.sh scripts/copy_uswds_assets.sh
+#COPY scripts/copy_uswds_assets.sh scripts/copy_uswds_assets.sh
 EXPOSE 3000
 
 RUN echo "Building with NODE_ENV: ${NODE_ENV}"

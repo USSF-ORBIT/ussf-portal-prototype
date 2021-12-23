@@ -24,4 +24,4 @@ coverage
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+.envrc*

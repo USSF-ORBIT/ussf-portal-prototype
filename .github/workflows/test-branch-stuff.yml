@@ -1,0 +1,15 @@
+name: Testing Github Actions Things.
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-push-aws:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Get tag
+      run: |
+        echo git.short.sha = ${{ github.sha:7 }}
+        echo github.event.pull_request_number = ${{ github.event.pull_request_number }}
