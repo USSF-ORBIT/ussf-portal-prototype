@@ -15,4 +15,4 @@ jobs:
     - name: Check outputs
       run: |
         echo ${{ steps.vars.outputs.sha_short }}
-        echo github.event.pull_request_number = ${{ github.event.pull_request_number }}
+        echo github.event.pull_request_number = ${{ github.event.pull_request.number }}
