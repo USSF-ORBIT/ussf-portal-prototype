@@ -2,7 +2,7 @@
 
 # Build target base #
 #####################
-FROM node:14.19.3-alpine AS base
+FROM node:14.20.0-alpine AS base
 
 WORKDIR /app
 
